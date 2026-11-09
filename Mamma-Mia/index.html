@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cardápio digital da Pizzaria Mamma Mia">
+  <title>Mamma Mia | Pizzaria</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="#">🍕 Pizzaria Mamma Mia</a>
+    <a class="link-carrinho" href="#pedido">Meu pedido <span id="contador">0</span></a>
+  </header>
+
+  <main>
+    <section class="apresentacao">
+      <h1>Escolha seus sabores favoritos<br>e peça sem sair de casa</h1>
+      <a class="botao botao-claro" href="#cardapio">Ver cardápio</a>
+    </section>
+
+    <section id="cardapio" class="secao">
+      <div class="cabecalho-secao">
+        <div><p class="etiqueta">NOSSO CARDÁPIO</p><h2>Escolha sua pizza</h2></div>
+      </div>
+      <div id="lista-pizzas" class="grade-pizzas"></div>
+    </section>
+
+    <section id="pedido" class="secao secao-pedido">
+      <div class="cabecalho-secao">
+        <div><p class="etiqueta">QUASE LÁ</p><h2>Finalize seu pedido</h2></div>
+        <p>Confira os itens e informe os dados de entrega.</p>
+      </div>
+      <div class="colunas-pedido">
+        <div class="cartao">
+          <h3>Seu carrinho</h3>
+          <div id="itens-carrinho"><p class="vazio">Seu carrinho está vazio.</p></div>
+          <div class="total"><span>Total</span><strong id="total">R$ 0,00</strong></div>
+        </div>
+        <form id="form-pedido" class="cartao">
+          <h3>Dados para entrega</h3>
+          <label for="nome">Nome completo</label>
+          <input id="nome" name="nome" autocomplete="name" maxlength="100" required>
+          <label for="telefone">Telefone</label>
+          <input id="telefone" name="telefone" type="tel" autocomplete="tel" maxlength="30" required>
+          <label for="endereco">Endereço completo</label>
+          <textarea id="endereco" name="endereco" rows="3" maxlength="300" required></textarea>
+          <label for="observacoes">Observações do pedido</label>
+          <textarea id="observacoes" name="observacoes" rows="3" maxlength="500" placeholder="Ex.: tirar cebola, tocar a campainha..."></textarea>
+          <button class="botao botao-principal" type="submit">Enviar pedido</button>
+          <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
+          <p class="aviso">"Isso aqui é só uma demonstração"</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer><strong>🍕 Mamma Mia</strong><span>Obrigado por escolher a gente!</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
